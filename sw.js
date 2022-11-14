@@ -1,5 +1,15 @@
 //import
-importScripts("/js/sw-utils.js");
+// importScripts("js/sw-utils.js");
+function actualizaCacheDinamico(dynamicCache, req, res) {
+  if (res.ok) {
+    return caches.open(dynamicCache).then((cache) => {
+      cache.put(req, res.clone());
+      return res.clone();
+    });
+  } else {
+    return res;
+  }
+}
 
 const STATIC_CACHE = "static-cache-v2";
 const DYNAMIC_CACHE = "dynamic-cache-v1";
