@@ -1,7 +1,13 @@
+var url = window.location.href;
+var swLocation = "/twitor/sw.js";
+
 //validate if navigator has service worker
 if ("serviceWorker" in navigator) {
+  if (url.includes("localhost")) {
+    swLocation = "/sw.js";
+  }
   //register service worker
-  navigator.serviceWorker.register("/sw.js");
+  navigator.serviceWorker.register(swLocation);
 }
 
 // Referencias de jQuery
