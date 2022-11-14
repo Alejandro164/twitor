@@ -12,8 +12,8 @@ function actualizaCacheDinamico(dynamicCache, req, res) {
 }
 
 const STATIC_CACHE = "static-cache-v4";
-const DYNAMIC_CACHE = "dynamic-cache-v2";
-const INMUTABLE_CACHE = "inmutable-cache-v1";
+const DYNAMIC_CACHE = "dynamic-cache-v3";
+const INMUTABLE_CACHE = "inmutable-cache-v2";
 
 const APP_SHELL = [
   //   "/",
